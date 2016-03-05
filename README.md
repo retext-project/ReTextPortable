@@ -31,8 +31,9 @@ Creating a PortableApps version of ReText
         python -m pip install pyenchant
         python -m pip install pygments
 
-10. Run the portable apps launcher generator on the `ReTextPortable` directory to create `ReTextPortable.exe`
-11. Run `ReTextPortable.exe` to start ReText
+10. Copy the icons from `App\ReTextIcons` into `App\retext\icons`
+11. Run the portable apps launcher generator on the `ReTextPortable` directory to create `ReTextPortable.exe`
+12. Run `ReTextPortable.exe` to start ReText
 
 
 [1]: http://portableapps.com/apps/development/portableapps.com_launcher
