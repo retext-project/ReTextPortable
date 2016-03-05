@@ -10,20 +10,28 @@ take with you.
 Creating a PortableApps version of ReText
 -----------------------------------------
 
-1. Install the [portableapps.com launcher][1] from portableapps.com
-2. Install [NSIS Portable (unicode version)][2] in a sibling directory
-3. Install [`python-3.4.4.amd64.msi`][3] from python.org into `ReTextPortable\App\python`  
+1. Get the [ReTextPortable files][1] from github.com and put them in a
+   directory called `ReTextPortable`
+2. Install the [portableapps.com launcher][2] from portableapps.com
+3. Install [NSIS Portable (unicode version)][3] in a sibling directory
+4. Install [`python-3.4.4.amd64.msi`][4] from python.org into
+   `ReTextPortable\App\python`  
    (you can exclude tcl/tk, Documentation and the Test suite)
-4. Install [`PyQt5-5.5.1-gpl-Py3.4-Qt5.5.1-x64.exe`][4] from riverbankcomputing.com
-   into `ReTextPortable\App\python`  
+5. Install [`PyQt5-5.5.1-gpl-Py3.4-Qt5.5.1-x64.exe`][5] from
+   riverbankcomputing.com into `ReTextPortable\App\python`  
    (the "Minimal" install will suffice)
-5. Get the [ReText source code][5], either using git or downloading a zip file from github.com
-6. Store the source code in `ReTextPortable\App\retext`  
-   (if you download a zip file you can extract it to the `App` dir and rename `retext-<branch>` to `retext`)
-7. Get the [pymarkups source code][6], either using git or downloading a zip file from github.com
-8. Store the source code in `ReTextPortable\App\retext`  
-   (if you download a zip file you can extract it to the `App` dir and rename `retext-<branch>` to `retext`)
-9. Install ReText's remaining python dependencies as well as a backport of socketpair:
+6. Get the [ReText source code][6], either using git or downloading a zip file
+   from github.com
+7. Store the source code in `ReTextPortable\App\retext`  
+   (if you download a zip file you can extract it to the `App` dir and rename
+   `retext-<branch>` to `retext`)
+8. Get the [pymarkups source code][7], either using git or downloading a zip
+   file from github.com
+9. Store the source code in `ReTextPortable\App\pymarkups`  
+   (if you download a zip file you can extract it to the `App` dir and rename
+   `pymarkups-<branch>` to `pymarkups`)
+10. Install ReText's remaining python dependencies as well as a backport of
+    socketpair:
 
         cd ReTextPortable\App\python
         python -m pip install docutils
@@ -32,27 +40,30 @@ Creating a PortableApps version of ReText
         python -m pip install pygments
         python -m pip install backports.socketpair
 
-10. Copy the icons from `App\ReTextIcons` into `App\retext\icons`
-11. Run the portable apps launcher generator on the `ReTextPortable` directory to create `ReTextPortable.exe`
-12. Run `ReTextPortable.exe` to start ReText
+11. Copy the icons from `App\ReTextIcons` into `App\retext\icons`
+12. Run the portable apps launcher generator on the `ReTextPortable` directory
+    to create `ReTextPortable.exe`
+13. Run `ReTextPortable.exe` to start ReText
 
-
-[1]: http://portableapps.com/apps/development/portableapps.com_launcher
-[2]: http://portableapps.com/apps/development/nsis_portable
-[3]: https://www.python.org/downloads/windows/
-[4]: https://www.riverbankcomputing.com/software/pyqt/download5
-[5]: https://github.com/retext-project/retext
-[6]: https://github.com/retext-project/pymarkups
+[1]: https://github.com/Griffon26/ReTextPortable
+[2]: http://portableapps.com/apps/development/portableapps.com_launcher
+[3]: http://portableapps.com/apps/development/nsis_portable
+[4]: https://www.python.org/downloads/windows/
+[5]: https://www.riverbankcomputing.com/software/pyqt/download5
+[6]: https://github.com/retext-project/retext
+[7]: https://github.com/retext-project/pymarkups
 
 
 Creating an installer for ReTextPortable
 ----------------------------------------
 
-If you want you can also package the application created in the previous section in a single executable.
+If you want you can also package the application created in the previous
+section in a single executable.
 
-1. Install the [portableapps.com installer][7] from portableapps.com
+1. Install the [portableapps.com installer][8] from portableapps.com
 2. Run the portable apps installer generator on the `ReTextPortable` directory
    to create `ReTextPortable_5.2.1.paf.exe`, which will be stored next to the
    `ReTextPortable` directory.
 
-[7]: http://portableapps.com/apps/development/portableapps.com_installer
+[8]: http://portableapps.com/apps/development/portableapps.com_installer
+
