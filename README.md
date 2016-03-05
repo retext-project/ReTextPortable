@@ -23,13 +23,14 @@ Creating a PortableApps version of ReText
 7. Get the [pymarkups source code][6], either using git or downloading a zip file from github.com
 8. Store the source code in `ReTextPortable\App\retext`  
    (if you download a zip file you can extract it to the `App` dir and rename `retext-<branch>` to `retext`)
-9. Install ReText's remaining python dependencies:
+9. Install ReText's remaining python dependencies as well as a backport of socketpair:
 
         cd ReTextPortable\App\python
         python -m pip install docutils
         python -m pip install markdown
         python -m pip install pyenchant
         python -m pip install pygments
+        python -m pip install backports.socketpair
 
 10. Copy the icons from `App\ReTextIcons` into `App\retext\icons`
 11. Run the portable apps launcher generator on the `ReTextPortable` directory to create `ReTextPortable.exe`
