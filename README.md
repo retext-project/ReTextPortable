@@ -14,10 +14,10 @@ Creating a PortableApps version of ReText
    directory called `ReTextPortable`
 2. Install the [portableapps.com launcher][2] from portableapps.com
 3. Install [NSIS Portable (unicode version)][3] in a sibling directory
-4. Install [`python-3.4.4.amd64.msi`][4] from python.org into
+4. Install [`python-3.4.4.msi`][4] from python.org into
    `ReTextPortable\App\python`  
    (you can exclude tcl/tk, Documentation and the Test suite)
-5. Install [`PyQt5-5.5.1-gpl-Py3.4-Qt5.5.1-x64.exe`][5] from
+5. Install [`PyQt5-5.5.1-gpl-Py3.4-Qt5.5.1-x32.exe`][5] from
    riverbankcomputing.com into `ReTextPortable\App\python`  
    (the "Minimal" install will suffice)
 6. Get the [ReText source code][6], either using git or downloading a zip file
@@ -53,6 +53,12 @@ Creating a PortableApps version of ReText
 [6]: https://github.com/retext-project/retext
 [7]: https://github.com/retext-project/pymarkups
 
+### A note on creating a 64-bit version
+
+Instead of installing 32-bit versions of Python and PyQt5 you can also use the
+64-bit versions. Unfortunately this will disable the spell checker in ReText,
+because pyenchant only provides the necessary plugin DLLs on 32-bit
+installations of Python.
 
 Creating an installer for ReTextPortable
 ----------------------------------------
