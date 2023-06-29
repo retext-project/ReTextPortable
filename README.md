@@ -21,7 +21,7 @@ Creating a PortableApps version of ReText
 5. Edit the file named similarly to `python312._pth` and add the line `Lib\site-packages` at the end 
 6. Download [get-pip.py][5] into
    `ReTextPortable\App\python`
-7  From a command prompt go to the python directory and run get-pip:
+7. From a command prompt go to the python directory and run get-pip:
 
         cd ReTextPortable\App\python
         python get-pip.py
