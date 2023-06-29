@@ -18,7 +18,7 @@ Creating a PortableApps version of ReText
    the PortableApps.com Launcher as NSISPortable
 4. Extract the [64-bit Windows embeddable package][4] from python.org into
    `ReTextPortable\App\python`
-5. Edit the file named similarly to `python312._pth` and add the line `Lib\site-packages` at the end 
+5. Edit the file named similarly to `python312._pth` and uncomment the line `import site` 
 6. Download [get-pip.py][5] into
    `ReTextPortable\App\python`
 7. From a command prompt go to the python directory and run get-pip:
@@ -29,6 +29,7 @@ Creating a PortableApps version of ReText
 8. In the same command window install retext and all its dependencies using pip:
 
         python -m pip install retext
+        python -m pip install PyQt6-WebEngine
 
 12. Run the portable apps launcher generator on the `ReTextPortable` directory
     to create `ReTextPortable.exe`
