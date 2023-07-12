@@ -58,7 +58,7 @@ section in a single executable.
 
 1. Install the [portableapps.com installer][6] from portableapps.com
 2. Run the portable apps installer generator on the `ReTextPortable` directory
-   to create `ReTextPortable_5.2.1.paf.exe`, which will be stored next to the
+   to create `ReTextPortable_8.0.1.paf.exe`, which will be stored next to the
    `ReTextPortable` directory.
 
 [6]: http://portableapps.com/apps/development/portableapps.com_installer
