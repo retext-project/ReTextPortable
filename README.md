@@ -1,7 +1,7 @@
 ReTextPortable
 ==============
 This repository contains configuration files for creating a PortableApps
-version of ReText for Windows.
+version of [ReText](https://github.com/retext-project/retext) for Windows.
 
 Following the steps in this document you can get ReText up and running
 on your machine and optionally create an installer that you can easily
@@ -25,7 +25,7 @@ Creating a PortableApps version of ReText
 
         cd ReTextPortable\App\python
         python get-pip.py
-        
+
 8. In the same command window install retext and all its dependencies using pip:
 
         python -m pip install retext
