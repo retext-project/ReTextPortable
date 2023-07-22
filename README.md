@@ -46,8 +46,19 @@ Creating a PortableApps version of ReText
 Using the latest versions from github
 -------------------------------------
 
-TBD
+In order to create an installer with the latest version of ReText from git,
+replace step 8 in the description above with the following:
 
+8. a. Go to https://github.com/retext-project/retext, click the green Code button and click Download ZIP
+   
+   b. Extract the zip file to the directory *above* `RetextPortable`.
+      A directory `retext-master` will be created next to the ReTextPortable directory
+
+   c. In the same command window used in step 7 install retext and all its dependencies:
+
+       python -m pip install ..\..\..\retext-master
+       python get-icons.py
+       python -m pip install PyQt6-WebEngine
 
 
 Creating an installer for ReTextPortable
@@ -57,8 +68,10 @@ If you want you can also package the application created in the previous
 section in a single executable.
 
 1. Install the [portableapps.com installer][6] from portableapps.com
-2. Run the portable apps installer generator on the `ReTextPortable` directory
-   to create `ReTextPortable_8.0.1.paf.exe`, which will be stored next to the
+2. Adapt the version numbers in `ReTextPortable\App\AppInfo\appinfo.ini` to match
+   the version of ReText you are packaging
+3. Run the portable apps installer generator on the `ReTextPortable` directory
+   to create `ReTextPortable_<version>.paf.exe`, which will be stored next to the
    `ReTextPortable` directory.
 
 [6]: http://portableapps.com/apps/development/portableapps.com_installer
